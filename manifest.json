@@ -5,9 +5,6 @@
     "description": "Add a Google Maps link to the search results page",
     "permissions": ["activeTab", "tabs", "scripting"],
     "host_permissions": ["*://*.google.com/*", "*://*.google.fr/*"],
-    "background": {
-      "service_worker": "background.js"
-    },
     "content_scripts": [
       {
         "matches": ["*://*.google.com/*", "*://*.google.fr/*"],
