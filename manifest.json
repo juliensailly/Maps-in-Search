@@ -8,7 +8,8 @@
         "tabs"
     ],
     "host_permissions": [
-        "<all_urls>"
+        "*://*.google.com/*",
+        "*://*.google.*"
     ],
     "background": {
         "service_worker": "background.js"
@@ -16,7 +17,8 @@
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "*://*.google.com/*",
+                "*://*.google.*"
             ],
             "js": [
                 "script.js"
