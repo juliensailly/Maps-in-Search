@@ -3,12 +3,34 @@
     "name": "Maps in Search",
     "version": "1.0",
     "description": "Add a Google Maps link to the search results page",
-    "permissions": ["activeTab", "tabs", "scripting"],
-    "host_permissions": ["*://*.google.com/*", "*://*.google.fr/*"],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*.google.com/*",
+        "*://*.google.fr/*"
+    ],
     "content_scripts": [
-      {
-        "matches": ["*://*.google.com/*", "*://*.google.fr/*"],
-        "js": ["script.js"]
-      }
-    ]
-  }
+        {
+            "matches": [
+                "*://*.google.com/*",
+                "*://*.google.fr/*"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

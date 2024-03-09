@@ -5,7 +5,7 @@ function main() {
             clearInterval(interval);
             AddMapsButton(searchStats);
         }
-    })
+    }, 500)
     setTimeout(() => {
         clearInterval(interval);
     }, 5000);
