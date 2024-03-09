@@ -2,27 +2,16 @@
     "manifest_version": 3,
     "name": "Maps in Search",
     "version": "1.0",
-    "description": "Execute a function on new page open",
-    "permissions": [
-        "activeTab",
-        "tabs"
-    ],
-    "host_permissions": [
-        "*://*.google.com/*",
-        "*://*.google.*"
-    ],
+    "description": "Add a Google Maps link to the search results page",
+    "permissions": ["activeTab", "tabs", "scripting"],
+    "host_permissions": ["*://*.google.com/*", "*://*.google.fr/*"],
     "background": {
-        "service_worker": "background.js"
+      "service_worker": "background.js"
     },
     "content_scripts": [
-        {
-            "matches": [
-                "*://*.google.com/*",
-                "*://*.google.*"
-            ],
-            "js": [
-                "script.js"
-            ]
-        }
+      {
+        "matches": ["*://*.google.com/*", "*://*.google.fr/*"],
+        "js": ["script.js"]
+      }
     ]
-}
+  }
